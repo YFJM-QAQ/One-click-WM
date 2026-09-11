@@ -48,7 +48,7 @@ title 批量图片水印处理工具 by  远方即明
 if not exist "%INPUT_DIR%" (
     mkdir "%INPUT_DIR%"
     echo 警告:未找到目录！
-    echo已为您创建目录，请在目录放入图像后回车。
+    echo 已为您创建目录，请在目录放入图像后回车。
     pause >nul
 ) 
 
@@ -69,7 +69,7 @@ if "%MASK_ENABLE%"=="OFF" (
 )
 
 echo 正在启动图片处理工具，请稍候...
-python ".\bin\main.py" "%INPUT_DIR%" -o "%OUTPUT_DIR%" -j 1 -t "%TEXT%"  --font "%FONT_PATH%" --font-size %FONT_SIZE% --text-color %TEXT_COLOR% --stroke-color %STROKE_COLOR% --stroke-width %STROKE_WIDTH% --box-color 0,0,0,0 --anchor %ANCHOR% --offset %OFFSET% --mask %MASK% --mask-color %MASK_COLOR% --logo "%LOGO_PATH%" --logo-scale %LOGO_SCALE% --logo-opacity %LOGO_OPACITY%
+python ".\bin\main.py" "%INPUT_DIR%" -o "%OUTPUT_DIR%" -j 15 -t "%TEXT%"  --font "%FONT_PATH%" --font-size %FONT_SIZE% --text-color %TEXT_COLOR% --stroke-color %STROKE_COLOR% --stroke-width %STROKE_WIDTH% --box-color 0,0,0,0 --anchor %ANCHOR% --offset %OFFSET% --mask %MASK% --mask-color %MASK_COLOR% --logo "%LOGO_PATH%" --logo-scale %LOGO_SCALE% --logo-opacity %LOGO_OPACITY% --quality --subsampling
 
 echo.
 echo 处理完成！按任意键退出...
